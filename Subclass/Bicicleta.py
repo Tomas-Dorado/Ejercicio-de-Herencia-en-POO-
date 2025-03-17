@@ -1,10 +1,9 @@
 from Superclass.Vehiculo import Vehiculo
 
 class Bicicleta(Vehiculo):
-    def __init__(self, color, ruedas, velocidad, cilindrada):
+    def __init__(self, color, ruedas, tipo):
         super().__init__(color, ruedas)
-        self.velocidad = velocidad
-        self.cilindrada = cilindrada
+        self.tipo = tipo
 
     def __str__(self):
-        return f"Color: {self.color}, Ruedas: {self.ruedas}, Velocidad: {self.velocidad} Km/hr, Cilindrada: {self.cilindrada} cc"
+        return f"Color: {self.color}, Ruedas: {self.ruedas}, Tipo: {self.tipo}"
