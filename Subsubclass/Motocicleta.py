@@ -1,8 +1,8 @@
 from Subclass.Bicicleta import Bicicleta
 
 class Motocicleta(Bicicleta):
-    def __init__(self, color, ruedas, velocidad, cilindrada, tipo):
-        super().__init__(color, ruedas, tipo)
+    def __init__(self, color, ruedas, velocidad, cilindrada, tipo, marca, modelo):
+        super().__init__(marca, modelo,color, tipo, ruedas)
         self.velocidad = velocidad
         self.cilindrada = cilindrada
 
