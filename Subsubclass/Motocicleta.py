@@ -7,10 +7,8 @@ class Motocicleta(Bicicleta):
         self.cilindrada = cilindrada
 
     def __str__(self):
-        return f"Color: {self.color}, Ruedas: {self.ruedas}, Velocidad: {self.velocidad} Km/hr, Cilindrada: {self.cilindrada} cc, Tipo: {self.tipo}"
+        return f"Color: {self.color}, Ruedas: {self.ruedas}, Velocidad: {self.velocidad} Km/hr, Cilindrada: {self.cilindrada} cc, Tipo: {self.tipo}, Marca: {self.marca}, Modelo: {self.modelo}"
 
-    def catalogar(self):
-        if self.ruedas == 2:
-            return "Motocicleta"
-        else:
-            return super
+    def catalogar(vehiculos):
+        for vehiculo in vehiculos:
+            print(f"{vehiculo.__class__.__name__}: {vehiculo}")

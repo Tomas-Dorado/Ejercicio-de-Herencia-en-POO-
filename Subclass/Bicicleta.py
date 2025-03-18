@@ -6,13 +6,11 @@ class Bicicleta(Vehiculo):
         self.marca = marca
         self.modelo = modelo
         self.tipo = tipo
-        self.ruedas = ruedas
 
     def __str__(self):
         return f"Color: {self.color}, Ruedas: {self.ruedas}, Tipo: {self.tipo}"
     
-    def catalogar(self):
-        if self.ruedas == 2:
-            return "Bicicleta"
-        else:
-            return super
+    @staticmethod
+    def catalogar(vehiculos):
+        for vehiculo in vehiculos:
+            print(f"{vehiculo.__class__.__name__}: {vehiculo}")

@@ -6,11 +6,10 @@ class Vehiculo:
     def __str__(self):
         return f"Color: {self.color}, Ruedas: {self.ruedas}"
     
-    def catalogar(self):
-        if self.ruedas == 2:
-            return "Bicicleta"
-        elif self.ruedas == 4:
-            return "Coche"
-        else:
-            return "Desconocido"
+    def __name__(self):
+        return self.__class__.__name
+    
+    def catalogar(self, lista_vehiculos):
+        for vehiculo in lista_vehiculos:
+            print(f"{type(vehiculo.__class__.__name__)}: {vehiculo}")
         

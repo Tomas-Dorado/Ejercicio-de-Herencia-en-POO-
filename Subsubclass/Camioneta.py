@@ -10,8 +10,6 @@ class Camioneta(Coche):
     def __str__(self):
         return f"Color: {self.color}, Ruedas: {self.ruedas}, Velocidad: {self.velocidad} Km/hr, Cilindrada: {self.cilindrada} cc, Carga: {self.capacidad_carga} Kg"
     
-    def catalogar(self):
-        if self.ruedas >= 4:
-            return "Camioneta"
-        else:
-            return super
+    def catalogar(vehiculos):
+        for vehiculo in vehiculos:
+            print(f"{vehiculo.__class__.__name__}: {vehiculo}")
