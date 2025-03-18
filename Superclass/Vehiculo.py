@@ -5,3 +5,12 @@ class Vehiculo:
 
     def __str__(self):
         return f"Color: {self.color}, Ruedas: {self.ruedas}"
+    
+    def catalogar(self):
+        if self.ruedas == 2:
+            return "Bicicleta"
+        elif self.ruedas == 4:
+            return "Coche"
+        else:
+            return "Desconocido"
+        

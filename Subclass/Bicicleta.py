@@ -10,3 +10,9 @@ class Bicicleta(Vehiculo):
 
     def __str__(self):
         return f"Color: {self.color}, Ruedas: {self.ruedas}, Tipo: {self.tipo}"
+    
+    def catalogar(self):
+        if self.ruedas == 2:
+            return "Bicicleta"
+        else:
+            return super

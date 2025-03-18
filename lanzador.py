@@ -3,15 +3,16 @@ from Subclass.Bicicleta import Bicicleta
 from Subsubclass.Camioneta import Camioneta
 from Subsubclass.Motocicleta import Motocicleta
 
-def lanzadera_main():
+def lanzadera_main(new_vehiculo=None):
     # Crear ejemplos de los diferentes vehículos
     coche = Coche("Rojo", 4, "Gasolina", 150)
     bicicleta = Bicicleta("lujo", "Montaña","Azul","Urbana",2)
     camioneta = Camioneta("Negro", 4, 200, 1000, "Haudi", 1990, 98)
     motocicleta = Motocicleta("Blanca", 2, 180,1000, "Deportiva", "linux", 1999)
-    
+    lista = [coche, bicicleta, camioneta, motocicleta]
+    lista.append(new_vehiculo)
     # Retornar los vehículos en una lista
-    return [coche, bicicleta, camioneta, motocicleta]
+    return lista
 
 def catalogar(vehiculos, ruedas=None):
     if ruedas is not None:
