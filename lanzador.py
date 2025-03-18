@@ -29,12 +29,31 @@ def lanzador_main():
     ]
     return vehiculos
 
-    def catalogar(vehiculos):
+def catalogar(vehiculos):
+    for vehiculo in vehiculos:
+        print(f"Clase: {vehiculo.__class__.__name__}")
+        for atributo, valor in vehiculo.__dict__.items():
+            print(f"{atributo}: {valor}")
+        print()
+
+def catalogar_ruedas(vehiculos, ruedas=None):
+    if ruedas is not None:
+        vehiculos_filtrados = [v for v in vehiculos if getattr(v, 'ruedas', None) == ruedas]
+        print(f"Se han encontrado {len(vehiculos_filtrados)} vehículos con {ruedas} ruedas:")
+        for vehiculo in vehiculos_filtrados:
+            print(f"Clase: {vehiculo.__class__.__name__}")
+            for atributo, valor in vehiculo.__dict__.items():
+                print(f"{atributo}: {valor}")
+            print()
+    else:
         for vehiculo in vehiculos:
             print(f"Clase: {vehiculo.__class__.__name__}")
             for atributo, valor in vehiculo.__dict__.items():
                 print(f"{atributo}: {valor}")
             print()
+
+
+
 
 # Ejecución de las funciones
 lanzador_main()

@@ -47,17 +47,11 @@ def obtener_datos_vehiculo(opcion):
         cilindrada = int(input("Ingrese la cilindrada en cc: "))
         return Motocicleta(color, ruedas,velocidad, cilindrada, tipo, marca, modelo)
     elif opcion == 5:
-        lanzador_main().catalogar(vehiculos)
-        def catalogar(vehiculos, ruedas=None):
-            if ruedas is not None:
-            vehiculos_filtrados = [v for v in vehiculos if v.ruedas == ruedas]
-            print(f"Se han encontrado {len(vehiculos_filtrados)} vehículos con {ruedas} ruedas:")
-            for vehiculo in vehiculos_filtrados:
-                print(f"{type(vehiculo).__name__}: {vehiculo.ruedas} ruedas")
-            else:
-            for vehiculo in vehiculos:
-                print(f"{type(vehiculo).__name__}: {vehiculo.ruedas} ruedas")
-
+        vehiculos = []
+        vehiculos.append(Coche("Rojo", 4, 180, 2000))
+        vehiculos.append(Bicicleta("GW", "X1", "Azul", "Montaña", 2))
+        vehiculos.append(Camioneta("negro",6, 150, 2500, "Ford", 2019, 1000))
+        lanzador_main().catalogar_ruedas(vehiculos, 2)
     else:
         return None
 
